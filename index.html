@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IP Tracker</title>
+    <!-- Bootstrap Grid -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap-grid.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="favicon/png" href="./img/favicon-32x32.png">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css"
+        integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Main Starts -->
+    <main id="main">
+        <!-- Tracker-Info -->
+        <section id="tracker-info">
+            <div class="container">
+                <div class="tracker-header">
+                    <h2>IP Address Tracker</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 m-auto">
+                        <div class="tracker-container">
+                            <form id="tracker">
+                                <input type="text" name="ip" id="ip" placeholder="Search for any IP address or domain">
+                                <input type="submit" id="submit-btn" value="&#10095;">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Result Container -->
+                <div class="col-md-7 mx-auto">
+                    <div id="results">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-3 result">
+                                    <h6 class="result-header">IP ADDRESS</h6>
+                                    <p id="ip-address"></p>
+                                </div>
+                                <div class="col-md-3 result">
+                                    <h6 class="result-header">LOCATION</h6>
+                                    <p id="location"></p>
+                                </div>
+                                <div class="col-md-3 result">
+                                    <h6 class="result-header">TIMEZONE</h6>
+                                    <p id="timezone"></p>
+                                </div>
+                                <div class="col-md-3 result">
+                                    <h6 class="result-header">ISP</h6>
+                                    <p id="isp"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map-Container -->
+        <section id="map">
+            <div id="mapid"></div>
+        </section>
+
+    </main>
+    <!-- Main Ends -->
+
+    <!-- Leaflet JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"
+        integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Local Script Files -->
+    <script src="js/config.js"></script>
+    <script src="js/ip.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

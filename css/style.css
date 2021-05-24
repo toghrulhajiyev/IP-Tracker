@@ -1,0 +1,121 @@
+.container {
+  max-width: 1440px;
+  margin: auto; }
+
+p {
+  margin: 0; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px; }
+
+.alert {
+  position: fixed;
+  top: 3%;
+  left: 4%;
+  background-color: #f70132;
+  border-radius: 0.625em;
+  padding: 0.6em;
+  color: #fff; }
+
+#main #tracker-info {
+  background: url("../img/pattern-bg.png") no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  padding: 4em 0; }
+  #main #tracker-info .tracker-header h2 {
+    color: #fff;
+    font-weight: 500; }
+  #main #tracker-info .tracker-container #tracker {
+    position: relative; }
+    #main #tracker-info .tracker-container #tracker #ip {
+      margin: 2em 0;
+      padding: 1em;
+      width: 100%;
+      border: none;
+      border-radius: 15px;
+      outline-width: 0; }
+    #main #tracker-info .tracker-container #tracker #submit-btn {
+      position: absolute;
+      top: 2em;
+      right: 0;
+      color: #fff;
+      padding: 1em 1.5em;
+      border: none;
+      border-radius: 0 15px 15px 0;
+      background-color: #000;
+      outline-width: 0;
+      transition: all 0.4s linear; }
+      #main #tracker-info .tracker-container #tracker #submit-btn:hover {
+        background-color: #969696; }
+  #main #tracker-info #results {
+    position: absolute;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 13px;
+    padding: 2em 0;
+    box-shadow: 0 0 40px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1; }
+    #main #tracker-info #results .result {
+      padding: 0 2em;
+      width: 11.5em;
+      height: 4em; }
+      #main #tracker-info #results .result:not(:last-child) {
+        border-right: 1px solid #f2f2f2; }
+      #main #tracker-info #results .result .result-header {
+        color: #adadad;
+        font-weight: 400; }
+#main #map {
+  height: 58.5vh; }
+  #main #map #mapid {
+    height: 100%;
+    z-index: 0; }
+
+@media only screen and (max-width: 576px) {
+  .alert {
+    top: 2%;
+    font-size: .6em; }
+
+  #main #tracker-info {
+    padding: 3em 0 6em 0; }
+    #main #tracker-info .tracker-container #tracker #ip {
+      margin: 0 0 1em 0;
+      font-size: 0.8em; }
+    #main #tracker-info .tracker-container #tracker #submit-btn {
+      top: 0;
+      font-size: 0.8em; }
+    #main #tracker-info #results {
+      padding: 1em 0; }
+      #main #tracker-info #results .result {
+        text-align: center;
+        width: 100%;
+        height: 3em; }
+        #main #tracker-info #results .result:not(:last-child) {
+          border: none; }
+  #main #map {
+    height: 100vh; } }
+@media only screen and (min-width: 577px) and (max-width: 1024px) {
+  #main #tracker-info {
+    padding: 4em 0; }
+    #main #tracker-info .tracker-container #tracker #ip {
+      margin: 0 0 1em 0;
+      font-size: .7em;
+      margin: 0 0 2em 0; }
+    #main #tracker-info .tracker-container #tracker #submit-btn {
+      top: 0;
+      font-size: .7em; }
+    #main #tracker-info #results {
+      width: 100%; }
+      #main #tracker-info #results .result {
+        width: 100%; }
+        #main #tracker-info #results .result p {
+          font-size: 0.75em; }
+  #main #map {
+    height: 71vh; } }
+
+/*# sourceMappingURL=style.css.map */

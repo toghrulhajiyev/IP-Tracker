@@ -6,3 +6,5 @@ Thanks for checking out this repository.
 The purpose of this project is to improve work experience with APIs in a real projects.
 # The Project
 This project is about to build IP Address Tracker. To get locations according to IP Addresses we need to use [IP Geolocation API by IPify](https://geo.ipify.org). And for generating map, it's recommended to use [LeafletJS](https://leafletjs.com).
+
+If you want to check out the project, click [here](https://toghrulhajiyev.github.io/IP-Tracker/).

@@ -1,3 +1,12 @@
+// Instantiate IP
+const ip = new IP();
+
+// Instantiate Map
+const locMap = new LocMap();
+
+// Instantiate UI
+const ui = new UI();
+
 const ipInput = document.getElementById('ip');
 const trackerForm = document.getElementById('tracker');
 
@@ -6,15 +15,6 @@ trackerForm.addEventListener('submit', (e) => {
 
     // Get ip 
     const ipValue = ipInput.value;
-
-    // Instantiate IP
-    const ip = new IP();
-
-    // Instantiate Map
-    const locMap = new LocMap();
-
-    // Instantiate UI
-    const ui = new UI();
 
     if (ipValue !== '') {
         ip.getInfo(ipValue).then((data) => {
@@ -28,14 +28,14 @@ trackerForm.addEventListener('submit', (e) => {
                 // Clear Input
                 ui.clearInput();
             } else {
-                ui.showAlert('alert', 'Please use a valid IP address!');
+                ui.showAlert('alert', 'Please use a valid IP address or domain!');
             }
         })
-        .catch((err) => {
-            if(err.message === 'Failed to fetch') {
-                ui.showAlert('alert', 'Please turn off your adBlocker and tracker blocker to make this application work!');
-            }
-        });
+            .catch((err) => {
+                if (err.message === 'Failed to fetch') {
+                    ui.showAlert('alert', 'Please turn off your adBlocker and tracker blocker to make this application work!');
+                }
+            });
 
     } else {
         // Show Alert
